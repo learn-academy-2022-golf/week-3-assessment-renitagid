@@ -38,7 +38,6 @@ describe("fibonacci", () => {
 // At each iteration, it will update the array, by copying whatever is already in the array, and adding a new value
 // The new value will be the sum of the value at the current index added to the value at the previous index.
 // Since the prompt request for the output to start at 1, not 0, we will use the built in method .shift() to remove the 0 value at the beginning of the array.
-// Note: one edge case this does not work for is if the user inputs any number that is less than or equal to 0. The code will return [1]. I would probably go back and add an if statement to address this edge case, with a statement that runs the code only if number >0
 
 const fibonacci = (number) => {
   let fiboArray = [0, 1];
@@ -53,6 +52,33 @@ const fibonacci = (number) => {
 //   Test Suites: 1 passed, 1 total
 // Tests:       1 passed, 1 total
 
+// Note: one edge case this does not work for is if the user inputs any number that is less than or equal to 0. The code will return [1]. I would probably go back and add an if statement to address this edge case, with a statement that runs the code only if number >0
+
+describe("fibonacci1", () => {
+  const fibLength1 = 6;
+  const fibLength2 = 10;
+  it("takes in a number (greater than 2) and returns an array that length containing the numbers of the Fibonacci sequence", () => {
+    expect(fibonacci1(fibLength1)).toEqual([1, 1, 2, 3, 5, 8]);
+    expect(fibonacci1(fibLength2)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+    expect(fibonacci1(0)).toEqual("Please enter an integer higher than 0");
+  });
+});
+
+const fibonacci1 = (number) => {
+  if (number > 0) {
+    let fiboArray = [0, 1];
+    for (let i = 1; i < number; i++) {
+      fiboArray = [...fiboArray, fiboArray[i] + fiboArray[i - 1]];
+    }
+    fiboArray.shift();
+    return fiboArray;
+  } else {
+    return "Please enter an integer higher than 0";
+  }}
+
+
+//   Test Suites: 1 passed, 1 total
+// Tests:       4 passed, 4 total
 // --------------------2) Create a function that takes in an object and returns an array of the values sorted from least to greatest.
 // Hint: Check out this resource: Object.values() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values
 
@@ -121,11 +147,11 @@ describe("summedArray", () => {
 // Create a function called summedArray with a parameter of an array
 // Use a for loop to iterate through each item in the array
 // Within the for loop, starting at 0 index, set the current value to the sum of the current value plus the next value.
-// 
+//
 
 const summedArray = (array) => {
   for (let i = 1; i < array.length; i++) {
-    array[i] = array[i] + array[i-1]
+    array[i] = array[i] + array[i - 1];
   }
   return array;
 };
@@ -148,7 +174,7 @@ const summedArray = (array) => {
 
 // I realized my logic was a little off in the for loop. i should actually start at the index of 1 and add itself to the preceding number for it to iterate correctly.
 
-// // 
+// //
 // Test Suites: 1 passed, 1 total
 // Tests:       3 passed, 3 total
 
