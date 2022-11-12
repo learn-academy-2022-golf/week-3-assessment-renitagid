@@ -41,18 +41,19 @@ Researched answer: The Dom is an interface to access the display of an html docu
 
 6. STRETCH: Which is the difference between a div and a span?
 
-Your answer:
+Your answer: Unfortunately I am not too familiar with the usage of span. I can tell you that both div and span are generic html elements, which can be used to hold a variety of other elements. However, I will need to do some research to understand more about the specific use case for each one
 
-Researched answer:
+Researched answer: Span elements are used when you want the contained elements to appear inline with each other, whereas div is used to group items for styling within blocks, and adds line breaks before and after whatever is inside of it.
 
 ## Looking Ahead: Terms for Next Week
 
-1. Object-oriented programming:
+1. Object-oriented programming: a concept in software development that stands in contrast to other philosophies of approaching coding, such as functional programming. Whereas functional programming attempts to avoid changing state, and having data be modified, object orented programming expects this to happen and address it by using objects to represent complex data, as well as using state to track changes to data. An important focus of OOP is that it uses the concept of encapsulation to keep data contained within a class or object, preventing other parts of the program from accessing it unnecessarily.
 
-2. Ruby:
+2. Ruby: Ruby is a dynamic, interpreted, scripting language. It stands in contrast to JavaScript in that it is primarily a back end language used for generating pages that run on the server side, whereas Javascript is primarily used on client side applications.
 
-3. Implicit return:
+3. Implicit return: This is when the word return is assumed and does not need to be written out. In JavaScript, an implicit return is used with concise code that can be kept on one line.
 
-4. Ruby blocks:
+4. Ruby blocks: these are similar to higher end functions, in that they are anonymous functions which get passed into methods.
 
-5. Ruby hashes:
+5. Ruby hashes: these are similar to objects in JavaScript. They contain key value pairs within curly braces. one difference is that Ruby hashes don't need a variable declaration keyword. Also, when accessing the values, a different syntax is used; hashName[:keyName]
+whereas in JavaScript we would use hashName.keyName
